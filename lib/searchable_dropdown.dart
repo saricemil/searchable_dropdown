@@ -368,7 +368,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T?>> {
   TextStyle? get _textStyle =>
       widget.style ??
       (_enabled && !(widget.readOnly ?? false)
-          ? Theme.of(context).textTheme.subtitle2
+          ? Theme.of(context).textTheme.titleSmall
           : Theme.of(context)
               .textTheme
               .subtitle2!
@@ -829,7 +829,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
             ? prepareWidget(widget.doneButton,
                 parameter: selectedResult,
                 context: context, stringToWidgetFunction: (string) {
-                return (FlatButton.icon(
+                return (TextButton.icon(
                     onPressed: !valid
                         ? null
                         : () {
@@ -990,7 +990,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                FlatButton(
+                TextButton(
                   onPressed: () {
                     pop();
                   },

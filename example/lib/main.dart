@@ -518,7 +518,7 @@ class _MyAppState extends State<MyApp> {
             },
             isExpanded: true,
           ),
-          FlatButton(
+          TextButton(
             child: Text("Select $preselectedValue"),
             onPressed: () {
               setState(() {
